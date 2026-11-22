@@ -1,65 +1,41 @@
-Build, test, and deploy your code. Make code reviews, branch management, and issue triaging work the way you want. Select a workflow to get started.
+name: Build & Deploy to GitHub Pages
 
-Skip this and set up a workflow yourself 
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
 
-Search workflows
-Suggested for this repository
-Deno
-By GitHub Actions
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
-Deno logo
-Test your Deno project
+concurrency:
+  group: pages
+  cancel-in-progress: true
 
-JavaScript
-Jekyll using Docker image
-By GitHub Actions
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
 
-Jekyll using Docker image logo
-Package a Jekyll site using the jekyll/builder Docker image.
-
-HTML
-Publish Node.js Package to GitHub Packages
-By GitHub Actions
-
-Publish Node.js Package to GitHub Packages logo
-Publishes a Node.js package to GitHub Packages.
-
-JavaScript
-Publish Node.js Package
-By GitHub Actions
-
-Publish Node.js Package logo
-Publishes a Node.js package to npm.
-
-JavaScript
-Webpack
-By GitHub Actions
-
-Webpack logo
-Build a NodeJS project with npm and webpack.
-
-JavaScript
-Deployment
-View alldeployment workflows
-Deploy Node.js to Azure Web App
-By Microsoft Azure
-
-Deploy Node.js to Azure Web App logo
-Build a Node.js project and deploy it to an Azure Web App.
-
-Deployment
-Deploy Node.js to Azure Functions App
-By Microsoft Azure
-
-Deploy Node.js to Azure Functions App logo
-Build a Node.js project and deploy it to an Azure Functions App on Windows or Linux.
-
-Deployment
-Deploy to Amazon ECS
-By Amazon Web Services
-
-Deploy to Amazon ECS logo
-Deploy a container to an Amazon ECS service powered by AWS Fargate or Amazon EC2.
-
-Deployment
-Build and Deploy to GKE
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
