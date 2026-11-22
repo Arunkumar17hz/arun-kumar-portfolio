@@ -19,8 +19,8 @@ export const profile = {
   phoneHref: 'tel:+919943519949',
   whatsapp: 'https://wa.me/919943519949',
   linkedin: 'https://linkedin.com/in/arun-kumar-855320357/',
-  github: 'https://github.com/arunkumar-dev',
-  resume: 'resume/Arun_Kumar_Resume.pdf',
+  github: 'https://github.com/Arunkumar17hz',
+  resume: 'resume/Arun_Kumar_Resume_With_AI_Projects.pdf',
   availability: 'Open to entry-level Software / Web Developer roles',
   portrait: 'images/portrait-hero.png',
   portraitAlt: 'images/portrait-office.jpg',
@@ -115,7 +115,7 @@ export const projectRows = [
         longDescription:
           'A full CRUD application for managing student records: admissions, courses, attendance and results. Includes role-aware forms, validation, search/filter and a SQL-backed data layer built for reliability.',
         demo: '#projects',
-        github: 'https://github.com/arunkumar-dev',
+        github: 'https://github.com/Arunkumar17hz',
         category: 'Software Development',
       },
       {
@@ -131,7 +131,7 @@ export const projectRows = [
         longDescription:
           'A suite of production-style business sites: hero sections, service grids, testimonial carousels and contact flows — all mobile-first, accessible and tuned for Core Web Vitals.',
         demo: '#projects',
-        github: 'https://github.com/arunkumar-dev',
+        github: 'https://github.com/Arunkumar17hz',
         category: 'Web Development',
       },
       {
@@ -147,7 +147,7 @@ export const projectRows = [
         longDescription:
           'An automation hub where AI agents classify inputs, route tasks and chain REST APIs together — cutting manual busywork with logged, replayable runs.',
         demo: '#projects',
-        github: 'https://github.com/arunkumar-dev',
+        github: 'https://github.com/Arunkumar17hz',
         category: 'AI Automation',
       },
       {
@@ -163,7 +163,7 @@ export const projectRows = [
         longDescription:
           'A production-ready portfolio featuring React Three Fiber scenes, GSAP ScrollTrigger choreography, glassmorphism UI and full accessibility — SEO-friendly and blazing fast.',
         demo: '#home',
-        github: 'https://github.com/arunkumar-dev',
+        github: 'https://github.com/Arunkumar17hz',
         category: 'Personal Projects',
       },
     ],
@@ -186,7 +186,7 @@ export const projectRows = [
         longDescription:
           'Rebuilt a marketing landing page from wireframe to deploy: semantic HTML, custom CSS animations and vanilla JS interactions with zero jQuery.',
         demo: '#projects',
-        github: 'https://github.com/arunkumar-dev',
+        github: 'https://github.com/Arunkumar17hz',
         category: 'Web Development',
       },
       {
@@ -202,7 +202,7 @@ export const projectRows = [
         longDescription:
           'A component-driven dashboard: responsive grid, theme tokens, accessible form controls and smooth micro-interactions on every data change.',
         demo: '#projects',
-        github: 'https://github.com/arunkumar-dev',
+        github: 'https://github.com/Arunkumar17hz',
         category: 'Web Development',
       },
       {
@@ -218,7 +218,7 @@ export const projectRows = [
         longDescription:
           'A storefront frontend with search, filters, persistent cart and loading/error states — built as a reusable component library.',
         demo: '#projects',
-        github: 'https://github.com/arunkumar-dev',
+        github: 'https://github.com/Arunkumar17hz',
         category: 'Web Development',
       },
       {
@@ -234,7 +234,7 @@ export const projectRows = [
         longDescription:
           'A clean single-page portfolio showcasing skills, projects and contact info. Focused on responsive layout, accessibility and fast load times.',
         demo: '#projects',
-        github: 'https://github.com/arunkumar-dev',
+        github: 'https://github.com/Arunkumar17hz',
         category: 'Personal Projects',
       },
     ],
@@ -257,7 +257,7 @@ export const projectRows = [
         longDescription:
           'LLM-backed agent with tool-calling for email APIs, confidence thresholds and human-in-the-loop review before anything is sent.',
         demo: '#projects',
-        github: 'https://github.com/arunkumar-dev',
+        github: 'https://github.com/Arunkumar17hz',
         category: 'AI Automation',
       },
       {
@@ -273,7 +273,7 @@ export const projectRows = [
         longDescription:
           'A resilient pipeline: retries, idempotent loads, schema validation and notification hooks when anything drifts.',
         demo: '#projects',
-        github: 'https://github.com/arunkumar-dev',
+        github: 'https://github.com/Arunkumar17hz',
         category: 'AI Automation',
       },
       {
@@ -289,7 +289,7 @@ export const projectRows = [
         longDescription:
           'A middleware hub with token vaulting, retry policies, request logging and a small ops dashboard for uptime.',
         demo: '#projects',
-        github: 'https://github.com/arunkumar-dev',
+        github: 'https://github.com/Arunkumar17hz',
         category: 'AI Automation',
       },
     ],
@@ -312,7 +312,7 @@ export const projectRows = [
         longDescription:
           'Normalised MySQL schema, transactional writes and report queries that power the Student Management System UI.',
         demo: '#projects',
-        github: 'https://github.com/arunkumar-dev',
+        github: 'https://github.com/Arunkumar17hz',
         category: 'Software Development',
       },
       {
@@ -328,7 +328,7 @@ export const projectRows = [
         longDescription:
           'Built during the Thiranex cyber security internship: headers audit, input fuzzing hints and OWASP Top 10 checks with clear remediation notes.',
         demo: '#projects',
-        github: 'https://github.com/arunkumar-dev',
+        github: 'https://github.com/Arunkumar17hz',
         category: 'Software Development',
       },
       {
@@ -344,7 +344,7 @@ export const projectRows = [
         longDescription:
           'A set of tested CLI scripts that remove repetitive dev-ops friction — templating, changelog generation and repo hygiene checks.',
         demo: '#projects',
-        github: 'https://github.com/arunkumar-dev',
+        github: 'https://github.com/Arunkumar17hz',
         category: 'Software Development',
       },
     ],
@@ -367,7 +367,7 @@ export const projectRows = [
         longDescription:
           'Write posts in Markdown, ship static HTML — with RSS, tags and an editorial dark theme.',
         demo: '#projects',
-        github: 'https://github.com/arunkumar-dev',
+        github: 'https://github.com/Arunkumar17hz',
         category: 'Personal Projects',
       },
       {
@@ -383,7 +383,7 @@ export const projectRows = [
         longDescription:
           'A playful single-player quiz with animated transitions, difficulty tiers and offline persistence.',
         demo: '#projects',
-        github: 'https://github.com/arunkumar-dev',
+        github: 'https://github.com/Arunkumar17hz',
         category: 'Personal Projects',
       },
       {
@@ -399,7 +399,7 @@ export const projectRows = [
         longDescription:
           'Personal finance tool with CRUD entries, category budgets and MySQL-backed history.',
         demo: '#projects',
-        github: 'https://github.com/arunkumar-dev',
+        github: 'https://github.com/Arunkumar17hz',
         category: 'Personal Projects',
       },
     ],
@@ -521,7 +521,7 @@ export const contact = {
     {
       id: 'github',
       label: 'GitHub',
-      value: 'github.com/arunkumar-dev',
+      value: 'github.com/Arunkumar17hz',
       href: profile.github,
       icon: 'github',
       external: true,

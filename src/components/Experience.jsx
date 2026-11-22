@@ -30,10 +30,10 @@ function Milestone({ entry, index, isLast }) {
     <li className="relative grid gap-6 md:grid-cols-[1fr_auto_1fr] md:gap-0">
       {/* content side */}
       <motion.div
-        initial={{ opacity: 0, x: fromLeft ? -48 : 48 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, margin: '-90px' }}
-        transition={{ duration: 0.75, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
+        initial={{ opacity: 0, x: fromLeft ? -30 : 30, y: 16 }}
+        whileInView={{ opacity: 1, x: 0, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6, delay: 0.06, ease: [0.22, 1, 0.36, 1] }}
         className={`relative z-10 order-2 md:order-none md:pb-14 ${
           fromLeft
             ? 'md:col-start-1 md:row-start-1 md:pr-12 md:text-right'

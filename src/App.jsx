@@ -78,6 +78,16 @@ export default function App() {
 
   return (
     <div className="relative min-h-screen">
+      {/* Ambient cinematic gradient on its own fixed, GPU-composited layer
+          (smooth: transformed once, never repainted during scroll) */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none fixed inset-0 -z-10"
+        style={{
+          background:
+            'radial-gradient(ellipse 90% 50% at 50% -12%, rgba(229,9,20,0.16), transparent 62%), linear-gradient(180deg, #07070a 0%, #0a0a10 45%, #07070a 100%)',
+        }}
+      />
       {/* skip link — accessibility */}
       <a
         href="#about"

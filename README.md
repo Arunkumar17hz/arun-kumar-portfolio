@@ -68,7 +68,7 @@ footerNote       // built-with chips
 | `public/images/portrait-hero.png` | Hero portrait |
 | `public/images/portrait-office.jpg` | About portrait |
 | `public/images/proj-*.jpg` | Project card artwork |
-| `public/resume/Arun_Kumar_Resume.pdf` | Download Resume buttons |
+| `public/resume/Arun_Kumar_Resume_With_AI_Projects.pdf` | Download Resume buttons |
 
 ### Colors & type
 

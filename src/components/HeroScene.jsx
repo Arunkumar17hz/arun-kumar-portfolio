@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import * as THREE from 'three'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 
@@ -199,6 +199,11 @@ function Scene({ mouse }) {
 /* ------------------------------------------------------------------ */
 export default function HeroScene() {
   const mouse = useRef({ x: 0, y: 0 })
+  const wrap = useRef(null)
+  // Pause the render loop entirely while the hero is off-screen so
+  // scrolling through the rest of the page stays buttery (no WebGL
+  // frames being drawn for a scene nobody can see).
+  const [visible, setVisible] = useState(true)
 
   useEffect(() => {
     const onMove = (e) => {
@@ -206,16 +211,28 @@ export default function HeroScene() {
       mouse.current.y = (e.clientY / window.innerHeight) * 2 - 1
     }
     window.addEventListener('pointermove', onMove, { passive: true })
-    return () => window.removeEventListener('pointermove', onMove)
+
+    let io
+    if (wrap.current && 'IntersectionObserver' in window) {
+      io = new IntersectionObserver(
+        ([entry]) => setVisible(entry.isIntersecting),
+        { threshold: 0 },
+      )
+      io.observe(wrap.current)
+    }
+    return () => {
+      window.removeEventListener('pointermove', onMove)
+      io?.disconnect()
+    }
   }, [])
 
   return (
-    <div className="absolute inset-0" aria-hidden="true">
+    <div ref={wrap} className="absolute inset-0" aria-hidden="true">
       <Canvas
         dpr={[1, 1.75]}
         camera={{ position: [0, 0, 6.5], fov: 50 }}
         gl={{ antialias: true, alpha: false, powerPreference: 'high-performance' }}
-        frameloop="always"
+        frameloop={visible ? 'always' : 'never'}
       >
         <Scene mouse={mouse} />
       </Canvas>
